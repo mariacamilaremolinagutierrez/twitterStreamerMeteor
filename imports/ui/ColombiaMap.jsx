@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import d3 from "d3";
 
-import './ColombiaMap.css';
+import '../../client/stylesheets/ColombiaMap.css';
 
 export default class ColombiaMap extends Component {
 	constructor(props) {

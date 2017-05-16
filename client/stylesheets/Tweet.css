@@ -1,0 +1,22 @@
+.tweet {
+  width: 650px;
+  height: 150px;
+  margin: 20px;
+  border: #ddd solid 1px;
+  float:left;
+}
+.tweet_profile_pic {
+  width: 100px;
+  height: 100px;
+  margin-top: 25px; /* Half the height */
+  margin-left: 25px; /* Half the width */
+}
+.tweet_text {
+  margin-top: 25px;
+  margin-right: 25px;
+  width: 100%;
+}
+.tweet_name {
+  margin-left: 25px;
+  width: 100%;
+}

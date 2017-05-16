@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 
-
 import Tweet from "./Tweet.jsx";
 
 export default class TweetResults extends Component {

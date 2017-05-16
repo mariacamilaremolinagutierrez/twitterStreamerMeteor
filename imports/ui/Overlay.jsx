@@ -11,7 +11,7 @@ export default class Overlay extends Component {
 	}
 
 	drawTweets() {
-    var canvas = document.getElementById('canvas');
+    var canvas = this.canvas;
     if (canvas.getContext) {
       var ctx = canvas.getContext('2d');
 			var x; var y;
@@ -32,7 +32,7 @@ export default class Overlay extends Component {
 	render() {
 		return (
 			<div>
-				<canvas id="canvas" width="600" height="600"></canvas>
+				<canvas id="canvas" ref={(canvas)=>{this.canvas=canvas}} width="600" height="600"></canvas>
 			</div>);
 	}
 }

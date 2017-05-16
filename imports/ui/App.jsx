@@ -8,7 +8,7 @@ import Overlay from './Overlay.jsx';
 import ColombiaMap from './ColombiaMap.jsx';
 import { Tweets } from "../api/Tweets.js";
 
-import './App.css';
+import '../../client/stylesheets/App.css';
 
 export class App extends Component {
   constructor(props) {
@@ -39,8 +39,10 @@ export class App extends Component {
   render() {
     console.log("render!");
     return (
-      <div>
-        <h2>Tweets of Colombia</h2>
+      <div className="fullWebsite">
+        <h2>Tweets of Colombia</h2> <h4>by: <a href="https://mariacamilaremolinagutierrez.github.io">Maria Camila Remolina Gutiérrez</a></h4>
+
+        <br />
 
         <div className="map">
           <ColombiaMap
@@ -59,18 +61,16 @@ export class App extends Component {
         </div>
 
         <div className="tweetsResults">
-          <input type="text" onKeyPress={this.changeQuery.bind(this)} placeholder="Query"/>
+          <input type="text" className="form-control" onKeyPress={this.changeQuery.bind(this)} placeholder="Query"/>
           { this.props && this.props.err ?
             <div>Error: {this.props.err}</div> :
             <span></span>
           }
-          <h2>Results:</h2>
           {this.props && this.props.tweets ?
             <TweetsResults tweets={this.props.tweets}/> :
             <p>Enter a query</p>
           }
         </div>
-        
       </div>
     );
   }
