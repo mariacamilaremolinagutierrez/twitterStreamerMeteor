@@ -94,7 +94,7 @@ export default class ColombiaMap extends Component {
 
 		// Get province color
 		function fillFn(d){
-		  return color(me.props.data[nameFn(d)]||0);
+		  return "#333333";
 		}
 
 		// When clicked, zoom in

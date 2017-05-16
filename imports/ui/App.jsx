@@ -4,8 +4,8 @@ import { Meteor } from "meteor/meteor";
 import { createContainer} from "meteor/react-meteor-data"
 
 import TweetsResults from "./TweetsResults.jsx";
-import ColombiaMap from './ColombiaMap.jsx';
 import Overlay from './Overlay.jsx';
+import ColombiaMap from './ColombiaMap.jsx';
 import { Tweets } from "../api/Tweets.js";
 
 export class App extends Component {
