@@ -8,6 +8,8 @@ import Overlay from './Overlay.jsx';
 import ColombiaMap from './ColombiaMap.jsx';
 import { Tweets } from "../api/Tweets.js";
 
+import './App.css';
+
 export class App extends Component {
   constructor(props) {
     super(props);
@@ -38,8 +40,9 @@ export class App extends Component {
     console.log("render!");
     return (
       <div>
+        <h2>Tweets of Colombia</h2>
+
         <div className="map">
-          <h2>Map of Colombia</h2>
           <ColombiaMap
             width="600"
             height="600"
@@ -48,14 +51,14 @@ export class App extends Component {
           ></ColombiaMap>
         </div>
 
-        <div>
+        <div className="mapCanvas">
           <Overlay
             tweets={this.props.tweets}
             getProj={this.getProjection.bind(this)}
           ></Overlay>
         </div>
 
-        <div>
+        <div className="tweetsResults">
           <input type="text" onKeyPress={this.changeQuery.bind(this)} placeholder="Query"/>
           { this.props && this.props.err ?
             <div>Error: {this.props.err}</div> :
@@ -67,6 +70,7 @@ export class App extends Component {
             <p>Enter a query</p>
           }
         </div>
+        
       </div>
     );
   }

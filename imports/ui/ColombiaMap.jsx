@@ -3,7 +3,6 @@ import d3 from "d3";
 
 import './ColombiaMap.css';
 
-
 export default class ColombiaMap extends Component {
 	constructor(props) {
 		super(props);
