@@ -24,7 +24,7 @@ export class App extends Component {
     // "this" will change in the method call, so I need to save it
     let component = this;
 
-    console.log(evt.target.value);
+    console.log("Query: " + evt.target.value);
     Meteor.call("twitter.stream", evt.target.value);
   }
 
@@ -37,7 +37,7 @@ export class App extends Component {
   }
 
   render() {
-    console.log("render!");
+    //console.log("render!");
     return (
       <div className="fullWebsite">
         <h2>Tweets of Colombia</h2> <h4>by: <a href="https://mariacamilaremolinagutierrez.github.io">Maria Camila Remolina Gutiérrez</a></h4>

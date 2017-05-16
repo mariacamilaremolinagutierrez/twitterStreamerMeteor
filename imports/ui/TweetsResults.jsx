@@ -5,7 +5,7 @@ import Tweet from "./Tweet.jsx";
 export default class TweetResults extends Component {
   renderTweets() {
     return this.props.tweets.map((tweet) => {
-      return (<Tweet key={tweet.id} tweet={tweet}/>);
+      return (<Tweet key={tweet.id_str} tweet={tweet}/>);
     });
   }
 
