@@ -7,7 +7,7 @@ export default class Overlay extends Component {
 	}
 
 	componentWillUpdate(){
-		drawTweets();
+		this.drawTweets();
 	}
 
 	drawTweets() {
@@ -18,7 +18,7 @@ export default class Overlay extends Component {
 
 			this.props.tweets.map((tweet) => {
 				var coords = tweet.coordinates;
-				if coords != null {
+				if (coords != null) {
 					x, y = this.props.getProj(coords["coordinates"]);
 					console.log("coordenadas tweet: "+x+" "+y)
 					ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
@@ -27,6 +27,7 @@ export default class Overlay extends Component {
 	    });
     }
   }
+
 
 	render() {
 		return (
